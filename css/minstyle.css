@@ -350,6 +350,11 @@ body,html{
     .time,.place,.ourstory{
         left: 14.5%;
     }
+
+    ::-webkit-scrollbar {
+        width: 2px;
+        /* height: auto; */
+        }
 }
 
 @media(max-width:330px){
@@ -362,6 +367,11 @@ body,html{
     .time,.place,.ourstory{
         left: 7%;
     }
+
+    ::-webkit-scrollbar {
+        width: 0px;
+        /* height: auto; */
+        }
 }
 
 @media(max-width:290px){
