@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+
+
+
+body,html{
+    height: 100vh;
+    font-family: 'Quicksand', sans-serif;
+
+    margin: 0;
+    overflow-x:hidden ;
+}
+
+/* Background Image  */
+
+.bgimg1,.bgimg2,.bgimg3,.bgimg4,.bgimg5{
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bgimg1{
+    opacity: 0.8;
+    height: 100%;
+    background-image: url(../img/a7.jfif);
+    background-position: bottom;
+}
+
+.bgimg2{
+    /* opacity: 1; */
+    height: 500px;
+    background-image: url(../img/a5.jfif);
+    background-position: top;
+}
+
+.bgimg3{
+    opacity: 0.8;
+    height: 500px;
+    background-image: url(../img/a6.jfif);
+    background-position: top;
+}
+
+.bgimg4{
+    opacity: 1;
+    height: 500px;
+    background-image: url(../img/Cool\ wallpaper.jfif);
+    background-position :bottom; 
+}
+
+.bgimg5{
+    opacity: 1;
+    width: 300px;
+    height: 300px;
+    background-image: url(../img/a2.jfif);
+    background-position: top;
+}
+
+/* Menu bar  */
+
+.menu-bar{
+    /* display: inline-block; */
+    width: 100%;
+    text-align: right;
+
+    position: fixed;
+    top: 0;
+
+    z-index: 1;
+
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.menu-bar a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #d6d2d2;
+    margin:30px 20px;
+    /* padding: 20px 30px 0px 30px; */
+
+    text-align: center;
+
+    position: relative;
+
+    transition: all ease-in-out .4s;
+}
+
+/* menu bar hover effect  */
+.menu-bar a::before , .a1::before{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+
+    position: absolute;
+    top: 25px;
+    left: 0;
+
+    transform: rotateY(90deg);
+
+    transition: all ease-in-out .4s;
+}
+
+.menu-bar a:hover:before{
+    transform: rotateY(0deg);
+}
+.menu-bar a:hover{
+    color: #f0f0f0;
+}
+
+/* home page  */
+.home{
+    height: 100%;
+    color: #f0f0f0;
+    text-align: center;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position:relative;
+}
+
+.home h2{
+    font-size: 25px;
+    cursor: pointer;
+    padding: 10px 20px;
+
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.603),5px 5px 5px rgba(0, 0,0,0.2);
+    background-origin: padding-box;
+}
+
+.home span{
+    font-size: 8px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+}
+
+/* Total Time  */
+
+.div1{
+    height: 25vh;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.countup{ 
+    height: 100%;   
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.countup h3{
+    opacity: .8;
+    padding: 10px 30px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.514);
+    background-origin: padding-box;
+}
+
+/* Intro text  */
+.intro{
+    height: 30%;
+    font-size: 18px;
+    text-align: center;
+
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro a{
+    text-decoration: none;
+    color:#030303;
+    background-color: rgba(168, 168, 168, 0.815);
+    padding: 10px 20px;
+}
+
+.intro a:hover{
+    background-color: rgba(114, 114, 114, 0.925);
+}
+
+/* Wedding day info */
+.wedding-day{
+    width: 100%;
+}
+
+.wedding-day h3{
+    /* height: 15vh; */
+    font-size: 20px;
+    text-align: center;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.middle{
+    width: 100%;
+    height: 720px;
+    background-color: gray;
+
+    display:block;
+    margin: auto;
+
+    position: relative;
+}
+
+.middle a h4{
+    font-size: 20px;
+}
+.time a,.place a,.ourstory a{
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 900;
+    color: #000;
+
+}
+.time{
+    width: 250px;
+    height: 200px;
+
+    background:wheat;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 30px;
+
+    position: absolute;
+    top: 30px;
+
+    transition: all ease .5s;
+}
+.place{
+    width: 250px;
+    height: 200px;
+
+    background:wheat;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 30px;
+
+    position: absolute;
+    top: 260px;
+
+    transition: all ease .5s;
+}
+
+.ourstory{
+    width: 250px;
+    height: 200px;
+
+    background:wheat;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 30px;
+
+    position: absolute;
+    top: 490px;
+    
+    transition: all ease .5s;
+}
+
+.time,.place,.ourstory{
+    left: 36.115%;
+}
+
+.time:hover , .place:hover, .ourstory:hover{
+    transform: scale(1.1);
+}
+
+ /* Scrollbar styles */
+ ::-webkit-scrollbar {
+    width: 5px;
+    /* height: auto; */
+    }
+
+@media(max-width:660px){
+        .countup{
+            font-size: 15px;
+        }
+
+        .time,.place,.ourstory{
+            left: 30.115%;
+        }
+
+    }
+
+@media(max-width:500){
+    .intro span{
+        font-size: 10px;
+    }
+}
+
+@media(max-width:490px){
+    .countup{
+        font-size: 10px;
+    }
+
+    .menu-bar a{
+        font-size: 15px;
+    }
+
+    .intro{
+        font-size: 15px;
+        padding: 0;
+    }
+
+    .intro a{
+        padding: 10px 15px;
+    }
+
+    .time,.place,.ourstory{
+        left: 25%;
+    }
+}
+@media(max-width:390px){
+    .countup h3{
+        padding: 5px 5px;
+    }
+
+    .intro a{
+        padding: 7px 10px;
+    }
+
+    .time,.place,.ourstory{
+        left: 14.5%;
+    }
+}
+
+@media(max-width:330px){
+    .time,.place,.ourstory{
+        left: 10%;
+    }
+}
+
+@media(max-width:300px){
+    .time,.place,.ourstory{
+        left: 7%;
+    }
+}
+
+@media(max-width:290px){
+
+    .time,.place,.ourstory{
+        left: 3%;
+    }
+}
+@media(max-width:260px){
+    .intro{
+        font-size: 13px;
+        padding: 0;
+    }
+
+    .intro a{
+        padding: 7px 13px;
+    }
+    .time,.place,.ourstory{
+        left: 0%;
+    }
+}
