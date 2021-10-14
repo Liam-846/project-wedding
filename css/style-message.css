@@ -212,3 +212,87 @@ input,textarea{
     opacity: 1;
 }
 
+@media(max-width:650px){
+    .head{
+        margin-top: 20px;
+    }
+    .head h2{
+        font-size: 25px;
+    }
+}
+
+@media(max-width:430px){
+    .head h2{
+        font-size: 20px;
+    }
+}
+
+@media (max-width:400px) {
+    .head h2{
+        font-size: 15px;
+    }
+    .menu-bar a{
+        font-size: 15px;
+        margin: 20px 10px;
+    }
+    .header aside p{
+        font-size: 15px;
+    }
+    .header aside small{
+        font-size: 8px;
+    }
+    .user-name input{
+        width: 250px;
+        height: 30px;
+    }
+    .user-email input{
+        width: 250px;
+        height: 30px;
+    }
+    .user-fill textarea{
+        width: 250px;
+        max-width: 250px;
+        height: 70px;
+        min-height: 70px;
+    }
+    .btn button{
+        width: 100px;
+        height: 30px;
+    }
+}
+
+@media (max-width:310px) {
+    .head h2{
+        font-size: 15px;
+    }
+    .menu-bar a{
+        font-size: 15px;
+        margin: 20px 10px;
+    }
+    .header aside p{
+        font-size: 13px;
+    }
+    .header aside small{
+        font-size: 8px;
+    }
+    .user-name input{
+        width: 230px;
+        height: 30px;
+    }
+    .user-email input{
+        width: 230px;
+        height: 25px;
+    }
+    .user-fill textarea{
+        width: 230px;
+        max-width: 230px;
+        height: 70px;
+        min-height: 70px;
+    }
+    .btn button{
+        width: 80px;
+        height: 25px;
+        font-size: 15px;
+    }
+}
+
