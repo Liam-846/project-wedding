@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story</title>
+    <link rel="stylesheet" href="css/style-ourstory.css">
+</head>
+
+<body>
+    <!-- Heading menu bar -->
+    <div class="menu-bar">
+        <a href="./index.html" class="a1">Home</a>
+        <a href="#1">Our Story</a>
+        <a href="./index-message.html">Message</a>
+    </div>
+    <div class="story">
+        <div class="bgimg1" id="1">
+            <div class="bg1">
+                <h2>Our Story</h2>
+            </div>
+
+        </div>
+        <div class="text">
+            <h3>How we met ...if you let Rebekah tell it.</h3>
+            <p>Javan faded me. The first time I saw him, I was determined! I was singing in Harmonyx (an a cappella
+                group)
+                and I heard from a mutual friend that he was also a singer. After I spent about a week building up the
+                confidence to ask him to audition he said "I'll think about it" and walked smooth off. When auditions
+                finally rolled around and he walked into the room and sang his song *fans self* I knew I got him. And
+                I've
+                had him ever since.</p>
+            <h3>Javan's Version.</h3>
+            <p>I walked around with my fellow hooligans as a college sophomore at UNC Fall Fest 2009. The exhibition
+                showcased Rebekah's sorority on stage and my whole group just stopped. I told them then and there that
+                was
+                me so nobody try anything foolish. I found out she sang in an a cappella group so I auditioned so I
+                could
+                sing behind her. I've been standing behind her ever since...
+            </p>
+
+        </div>
+        <div class="container">
+
+        </div>
+    </div>
+
+
+    <div class="bgimg2">
+        <h3>He Proposed</h3>
+    </div>
+    <div class="propose">
+        <h4>AND</h4>
+    </div>
+
+    <div class="bgimg3">
+        <h3>She Said "Yes"</h3>
+    </div>
+
+    <div class="by"><span> Powered By </span><a href="#" target="_blank">&nbsp;P.KO</a> </div>
+
+    <script>
+        // UI
+        const container = document.querySelector('.container');
+
+        const url = 'https://source.unsplash.com/random/';
+        const rows = 5;
+
+        for (let i = 0; i < rows * 3; i++) {
+            const img = document.createElement('img');
+            img.src = `${url}${getrandomsize()}`;
+            // console.log(img);
+
+            container.appendChild(img);
+        }
+
+        function getrandomnum() {
+            return Math.floor(Math.random() * 10) + 300;
+        }
+
+        // console.log(getrandomnum());
+
+        function getrandomsize() {
+            return `${getrandomnum()}x${getrandomnum()}`;
+        }
+
+// console.log(getrandomsize());
+    </script>
+</body>
+
+</html>

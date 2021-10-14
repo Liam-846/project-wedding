@@ -73,7 +73,7 @@ body,html{
     font-size: 20px;
     color: #d6d2d2;
     margin:30px 20px;
-    /* padding: 20px 30px 0px 30px; */
+    text-shadow: 2px 2px 2px black;
 
     text-align: center;
 
@@ -111,6 +111,7 @@ body,html{
     color: #f0f0f0;
     text-align: center;
     letter-spacing: 2px;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -204,10 +205,15 @@ body,html{
 
 .middle{
     width: 100%;
-    height: 60vh;
+    height: auto;
     background-color: gray;
 
-    position: relative;
+    display: flex;
+    justify-content:space-around ;
+    align-items: center;
+    flex-wrap: wrap;
+
+    /* position: relative; */
 
 }
 
@@ -220,10 +226,15 @@ body,html{
     font-weight: 900;
     color: #000;
 
+    transition: all ease 0.8s;
+
+    z-index: 2;
 }
-.time{
+
+.time,.place,.ourstory{
     width: 300px;
-    height: 80%;
+    height:300px;
+    margin:20px 10px;
 
     background:wheat;
     text-align: center;
@@ -232,158 +243,155 @@ body,html{
     align-items: center;
     justify-content: center;
 
+    position: relative;
+
     border-radius: 30px;
+    overflow: hidden;
+
+}
+
+.time::before,.place::before,.ourstory::before{
+    content: '';
+
+    width: 100%;
+    height: 0;
+    background-color: rgb(182, 128, 48);
+
+    border-radius: 0 0 40% 40%;
 
     position: absolute;
-    top: 40px;
-    left: 5%;
+    top: 0;
+    left: 0;
 
-    transition: all ease .5s;
+    z-index: 1;
+
+    transition: all ease 0.8s;
 }
-.place{
-    width: 300px;
-    height: 80%;
 
-    background:wheat;
-    text-align: center;
+.time:hover a,.place:hover a,.ourstory:hover a {
+    color: #fff;
+    transition: all ease 0.8s;
+}
+
+.time:hover::before,.place:hover::before,.ourstory:hover::before {
+    height: 200%;
+}
+
+
+.by{
+    width: 100%;
+    height: 100px;
+    color: gray;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 
     display: flex;
-    align-items: center;
     justify-content: center;
-
-    border-radius: 30px;
-
-    position: absolute;
-    top: 40px;
-    left: 40%;
-
-    transition: all ease .5s;
-}
-
-.ourstory{
-    width: 300px;
-    height: 80%;
-
-    background:wheat;
-    text-align: center;
-
-    display: flex;
     align-items: center;
-    justify-content: center;
 
-    border-radius: 30px;
+}
+.by span{
+    opacity: 0.7;
+    cursor: pointer;
 
-    position: absolute;
-    top: 40px;
-    right: 5%;
-    
-    transition: all ease .5s;
+}
+.by span:hover{
+    opacity: 1;
+}
+.by a{
+    text-decoration: none;
+    color: gray;
+    font-weight: 400;
+    opacity: 0.7;
+    cursor: pointer;
+
+}
+.by a:hover{
+    opacity: 1;
 }
 
-.time:hover , .place:hover, .ourstory:hover{
-    transform: scale(1.1);
-}
+
 
  /* Scrollbar styles */
  ::-webkit-scrollbar {
     width: 5px;
-    /* height: auto; */
     }
-  
 
-@media(max-device-width: 1250px) {
- .time{
-     left: 3%;
- }
+@media(max-width:660px){
+    .countup{
+        font-size: 13px;
+    }
 
- .place{
-     left: 37%;
- }
-
- .ourstory{
-     right: 3%;
- }
 }
 
-@media(max-width:1200px){
-    /* .menu-bar{
-        overflow: auto;
-        white-space: nowrap;
-    } */
-
+@media(max-width:500px){
     .home h2{
-        width: 300px;
-        font-size: 30px;
-        padding: 10px 20px;
-        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.603),5px 5px 5px rgba(0, 0,0,0.2);
+        font-size: 35px;
     }
     .home span{
-        font-size: 10px;   
+        font-size:10px ;
     }
-    .countup{ 
-        height: 100%;   
-        color: white;
-        font-size: 20px;
-    }
-    .div1{
-        height: 100px;
-        font-size: 20px;
-    }
-    .intro{
-        height: 30%;
-        font-size: 20px;
-    }
-    
-    .intro a{
-        text-decoration: none;
-        color:#030303;
-        background-color: rgba(168, 168, 168, 0.815);
-        padding: 10px 20px;
-    }
-
-    .intro a:active{
-        background-color:rgba(168, 168, 168, 0.63) ;
-    }
-
-    .wedding-day h3{
-        text-align: center;
-        font-size: 20px;
-    }
-
-    .middle a h4{
-        font-size: 20px;
-    }
-
-    .time a,.place a,.ourstory a{
-        text-decoration: none;
-        font-size: 15px;
-        font-weight: 900;
-        color: #000;
-    
-    }
-
-    .time{
-        width: 200px;
-        height: 80%;
-
-        left: 5%;
-       
-        transition: all ease .5s;
-    }
-    .place{
-        width: 200px;
-        height: 80%;
-        left: 42.5%;
-    
-        transition: all ease .5s;
-    }
-    
-    .ourstory{
-        width: 200px;
-        height: 80%;
-        right: 5%;
-        
-        transition: all ease .5s;
-    }
-
+.countup{
+    font-size: 10px;
 }
+
+.menu-bar a{
+    font-size: 15px;
+}
+
+.intro span{
+    font-size: 18px;
+}
+
+.intro a{
+    padding: 10px 15px;
+}
+}
+
+@media(max-width:400px){
+.countup h3{
+    padding: 5px 5px;
+}
+
+.intro a{
+    padding: 7px 10px;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+    }
+}
+
+@media(max-width:350px){
+    .home h2{
+        font-size: 25px;
+    }
+    .home span{
+        font-size:8px ;
+    }
+
+.menu-bar a{
+    font-size: 15px;
+    margin: 20px 10px;
+}
+}
+
+@media(max-width:300px){
+::-webkit-scrollbar {
+    width: 0px;
+    /* height: auto; */
+    }
+}
+@media(max-width:270px){
+    .home h2{
+        font-size: 20px;
+    }
+    .home span{
+        font-size:6px ;
+    }
+.intro a{
+    padding: 7px 13px;
+}
+}
+
